@@ -1,0 +1,23 @@
+REM Rickroll - macOS
+REM Adapted from https://github.com/hak5/usbrubberducky-payload
+
+ID 1234:5678 Apple:Keyboard
+REM You can change these values to VID/PID of original Apple keyboard
+REM to bypass Keyboard Setup Assistant
+
+DELAY 500
+GUI SPACE
+DELAY 500
+STRING terminal
+DELAY 500
+ENTER
+DELAY 500
+STRING open 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+ENTER
+DELAY 1000
+ALT SPACE
+DELAY 250
+STRING osascript -e 'set volume 7' && killall Terminal
+ENTER
+DELAY 1500
+STRING f
